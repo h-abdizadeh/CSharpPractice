@@ -10,7 +10,7 @@ public partial class Form1 : Form
     string input = "0";
     double num1 = 0, num2 = 0;
     string opr = "";
-    bool newNumber = true;
+    bool newNumber = true,finalResult=false;
 
     private void button1_Click(object sender, EventArgs e)
     {
@@ -29,14 +29,21 @@ public partial class Form1 : Form
             input += btnText;
         }
 
+        finalResult = false;
+
         if (input.Contains('.'))
             return double.Parse(input).ToString();
         else
             return double.Parse(input).ToString("n0");
+
     }
 
     private void buttonSum_Click(object sender, EventArgs e)
     {
+        if (finalResult)
+        {
+            input = labelScreen.Text.Replace(",", "");
+        }
         num1 = double.Parse(input);
         opr = buttonSum.Text;
         newNumber = true;
@@ -52,14 +59,21 @@ public partial class Form1 : Form
         {
             "+" => num1 + num2,
             "-" => num1 - num2,
-            "Ã—" => num1 * num2,
-            "Ã·" => num1 / num2,
+            "×" => num1 * num2,
+            "÷" => num1 / num2,
             _ => 0
         };
 
         //3
-        labelScreen.Text = result.ToString("n0");
+        if (result.ToString().Contains('.'))
+            labelScreen.Text = result.ToString();
+        else
+            labelScreen.Text = result.ToString("n0");
+
+        
+
         newNumber = true;
+        finalResult = true;
     }
 
     private void button2_Click(object sender, EventArgs e)
@@ -78,6 +92,9 @@ public partial class Form1 : Form
 
     string InputFloat()
     {
+        newNumber = false;
+        finalResult = false;
+
         //if (!input.Contains('.'))
         //if (input.Contains('.') != true)
         //if (input.Contains('.') == false)
@@ -86,5 +103,79 @@ public partial class Form1 : Form
         //else
         return input;
 
+    }
+
+    private void button3_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button3.Text);
+    }
+
+    private void button4_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button4.Text);
+    }
+
+    private void button5_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button5.Text);
+    }
+
+    private void button6_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button6.Text);
+    }
+
+    private void button7_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button7.Text);
+    }
+
+    private void button8_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button8.Text);
+    }
+
+    private void button9_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button9.Text);
+    }
+
+    private void button0_Click(object sender, EventArgs e)
+    {
+        labelScreen.Text = InputNumber(labelScreen.Text, button0.Text);
+    }
+
+    private void buttonMinus_Click(object sender, EventArgs e)
+    {
+        if (finalResult)
+        {
+            input = labelScreen.Text.Replace(",", "");
+        }
+        num1 = double.Parse(input);
+        opr = buttonMinus.Text;
+        newNumber = true;
+    }
+
+    private void buttonDiv_Click(object sender, EventArgs e)
+    {
+        if (finalResult)
+        {
+            input = labelScreen.Text.Replace(",", "");
+        }
+        num1 = double.Parse(input);
+        opr = buttonDiv.Text;
+        newNumber = true;
+    }
+
+    private void buttonMult_Click(object sender, EventArgs e)
+    {
+        if (finalResult)
+        {
+            input = labelScreen.Text.Replace(",", "");
+        }
+        num1 = double.Parse(input);
+        opr = buttonMult.Text;
+        newNumber = true;
+        finalResult = false;
     }
 }
