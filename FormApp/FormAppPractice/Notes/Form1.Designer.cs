@@ -90,6 +90,7 @@
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
+            textBox2.RightToLeft = RightToLeft.Yes;
             textBox2.Size = new Size(373, 286);
             textBox2.TabIndex = 2;
             // 
@@ -102,6 +103,7 @@
             button3.TabIndex = 2;
             button3.Text = "نمایش";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
