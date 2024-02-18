@@ -1,4 +1,4 @@
-using System.Globalization;//persian calendar
+﻿using System.Globalization;//persian calendar
 //using System.IO;//File
 
 namespace Notes;
@@ -44,10 +44,25 @@ public partial class Form1 : Form
         {
             File.Create(fileName).Close();//dispose
         }
+        else
+        {
+            var lines = File.ReadAllLines(fileName);
+            foreach (var item in lines)
+            {
+                if (item.Contains("PM") || item.Contains("AM"))
+                {
+                    comboBox1.Items.Add(item);
+                }
+            }
+        }
+
+
     }
 
     private void button3_Click(object sender, EventArgs e)
     {
+        textBox2.Text = "";
+
         if (File.Exists(fileName))
         {
             //1
@@ -66,5 +81,32 @@ public partial class Form1 : Form
                 textBox2.Text += $"\r\n{item}";
             }
         }
+    }
+
+    private void button4_Click(object sender, EventArgs e)
+    {
+        if (File.Exists(fileName))
+        {
+            File.Delete(fileName);
+        }
+    }
+
+    private void button5_Click(object sender, EventArgs e)
+    {
+        File.WriteAllText(fileName, string.Empty /*""*/);
+    }
+
+    private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        var index = comboBox2.SelectedIndex;
+        //var text = comboBox2.SelectedText;
+        var item = comboBox2.SelectedItem;
+
+        if (index is 0)
+            BackColor = Color.DarkGray;
+        else if (item is "آبی")
+            BackColor = Color.SkyBlue;
+        else if (item is "قرمز")
+            BackColor = Color.IndianRed;
     }
 }

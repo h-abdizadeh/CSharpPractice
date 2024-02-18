@@ -34,15 +34,19 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(12, 402);
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(12, 392);
             button1.Name = "button1";
-            button1.Size = new Size(94, 36);
+            button1.Size = new Size(94, 46);
             button1.TabIndex = 0;
             button1.Text = "خروج";
             button1.TextAlign = ContentAlignment.TopCenter;
@@ -99,17 +103,63 @@
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Location = new Point(12, 341);
             button3.Name = "button3";
-            button3.Size = new Size(94, 45);
+            button3.Size = new Size(94, 51);
             button3.TabIndex = 2;
             button3.Text = "نمایش";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(291, 341);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 45);
+            button4.TabIndex = 3;
+            button4.Text = "حذف فایل";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(191, 341);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 45);
+            button5.TabIndex = 4;
+            button5.Text = "پاکسازی";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(12, 12);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(185, 28);
+            comboBox1.TabIndex = 5;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "مشکی", "آبی", "قرمز" });
+            comboBox2.Location = new Point(680, 410);
+            comboBox2.Name = "comboBox2";
+            comboBox2.RightToLeft = RightToLeft.Yes;
+            comboBox2.Size = new Size(102, 28);
+            comboBox2.TabIndex = 6;
+            comboBox2.Text = "انتخاب رنگ";
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(button5);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(textBox2);
             Controls.Add(groupBox1);
@@ -133,5 +183,9 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Button button3;
+        private Button button4;
+        private Button button5;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
     }
 }
