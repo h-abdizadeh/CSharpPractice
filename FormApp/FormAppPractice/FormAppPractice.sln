@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepCounter", "StepCounter\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCalculator", "MiniCalculator\MiniCalculator.csproj", "{9DF05E19-B10A-43E0-806C-50F1FCC1A7BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes", "Notes\Notes.csproj", "{B18E6446-7E9D-446C-A4DF-95FA98D27B0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes", "Notes\Notes.csproj", "{B18E6446-7E9D-446C-A4DF-95FA98D27B0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleClass", "CircleClass\CircleClass.csproj", "{A93C80C8-E0C8-4469-B7CD-B5D737D4F314}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B18E6446-7E9D-446C-A4DF-95FA98D27B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B18E6446-7E9D-446C-A4DF-95FA98D27B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B18E6446-7E9D-446C-A4DF-95FA98D27B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A93C80C8-E0C8-4469-B7CD-B5D737D4F314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93C80C8-E0C8-4469-B7CD-B5D737D4F314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93C80C8-E0C8-4469-B7CD-B5D737D4F314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93C80C8-E0C8-4469-B7CD-B5D737D4F314}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

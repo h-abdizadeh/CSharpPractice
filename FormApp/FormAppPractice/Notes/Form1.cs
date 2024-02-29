@@ -6,6 +6,7 @@ namespace Notes;
 public partial class Form1 : Form
 {
     string fileName = "myFile.txt";
+    string fileTheme = "theme.txt";
     public Form1()
     {
         InitializeComponent();
@@ -36,6 +37,17 @@ public partial class Form1 : Form
 
         //File.AppendAllText(fileName, note);
         await File.AppendAllTextAsync(fileName, note);
+
+        //referesh combobox history
+        var lines = File.ReadAllLines(fileName);
+        comboBox1.Items.Clear();
+        foreach (var item in lines)
+        {
+            if (item.Contains("PM") || item.Contains("AM"))
+            {
+                comboBox1.Items.Add(item);
+            }
+        }
     }
 
     private void Form1_Load(object sender, EventArgs e)
@@ -56,7 +68,19 @@ public partial class Form1 : Form
             }
         }
 
+        //load theme
+        if (File.Exists(fileTheme))
+        {
+            var color = File.ReadAllText(fileTheme);
 
+            switch (color)
+            {
+                case "مشکی": BackColor = Color.DarkGray; break;
+                case "آبی": BackColor = Color.SkyBlue; break;
+                case "قرمز": BackColor = Color.IndianRed; break;
+                default: BackColor = Color.WhiteSmoke; break;
+            }
+        }
     }
 
     private void button3_Click(object sender, EventArgs e)
@@ -108,5 +132,25 @@ public partial class Form1 : Form
             BackColor = Color.SkyBlue;
         else if (item is "قرمز")
             BackColor = Color.IndianRed;
+
+        //save theme
+        File.WriteAllText(fileTheme, item.ToString());
+    }
+
+    private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        var endLine = comboBox1.SelectedItem.ToString();
+        if (File.Exists(fileName))
+        {
+            var note = File.ReadAllLines(fileName);
+
+            textBox2.Clear();
+            foreach(var item in note)
+            {
+                textBox2.Text += $"{item}\r\n";
+
+                if (item == endLine) break;
+            }
+        }
     }
 }
