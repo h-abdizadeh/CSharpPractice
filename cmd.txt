@@ -1,0 +1,78 @@
+Certainly! Here's a comprehensive list of Command Prompt (CMD) commands available in Windows:
+
+- **Append**: Allows programs to open data files in specified directories as if they were in the current directory.
+- **Arp**: Displays and modifies entries in the Address Resolution Protocol (ARP) cache.
+- **Assoc**: Associates or displays file extension associations.
+- **At**: Schedules commands and programs to run at a specific time.
+- **Attrib**: Changes or views file attributes.
+- **Auditpol**: Displays or modifies audit policies.
+- **Bcdboot**: Copies boot files to a system partition and creates a new system bootloader.
+- **Bcdedit**: Manages Boot Configuration Data (BCD) stores.
+- **Bitsadmin**: Creates and monitors download and upload jobs.
+- **Bootcfg**: Configures, queries, or changes Boot.ini file settings.
+- **Cacls**: Displays or modifies access control lists (ACLs) of files.
+- **Cd**: Changes the current directory.
+- **Chdir**: Changes the current directory (equivalent to cd).
+- **Chkdsk**: Checks a disk and displays a status report.
+- **Cls**: Clears the command prompt screen.
+- **Cmd**: Starts a new instance of the command interpreter.
+- **Comp**: Compares the contents of two files or sets of files.
+- **Copy**: Copies one or more files to another location.
+- **Date**: Displays or sets the system date.
+- **Del**: Deletes one or more files.
+- **Dir**: Displays a list of files and subdirectories in a directory.
+- **Diskpart**: Displays or configures Disk Partition properties.
+- **Driverquery**: Displays current device driver status and properties.
+- **Echo**: Displays messages or turns command echoing on or off.
+- **Exit**: Quits the CMD.EXE program (command interpreter).
+- **Expand**: Expands one or more compressed files.
+- **Fc**: Compares two files and displays the differences between them.
+- **Find**: Searches for a text string in a file or files.
+- **Findstr**: Searches for patterns of text in files.
+- **Format**: Formats a disk for use with Windows.
+- **Gpupdate**: Updates Group Policy settings.
+- **Help**: Provides Help information for Windows commands.
+- **Icacls**: Displays or modifies access control lists (ACLs) of files.
+- **Ipconfig**: Displays all current TCP/IP network configuration values.
+- **Label**: Creates, changes, or deletes the volume label of a disk.
+- **Md**: Creates a directory.
+- **Mklink**: Creates Symbolic Links and Hard Links.
+- **Mode**: Configures system devices.
+- **More**: Displays output one screen at a time.
+- **Move**: Moves one or more files from one directory to another directory.
+- **Net**: Displays or modifies the network configuration.
+- **Netstat**: Displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPv4 statistics (for the IP, ICMP, TCP, and UDP protocols), and IPv6 statistics (for the IPv6, ICMPv6, TCP over IPv6, and UDP over IPv6 protocols).
+- **Nslookup**: Displays information that you can use to diagnose Domain Name System (DNS) infrastructure.
+- **Path**: Displays or sets a search path for executable files.
+- **Ping**: Sends ICMP Echo Request messages to test network connectivity.
+- **Powercfg**: Manages the power settings on the computer.
+- **Reg**: Reads, sets, or deletes registry keys and values.
+- **Ren**: Renames a file or files.
+- **Replace**: Replaces files.
+- **Rmdir**: Removes a directory.
+- **Robocopy**: Advanced utility to copy files and directory trees.
+- **Sc**: Communicates with the Service Control Manager and services.
+- **Schtasks**: Schedules commands and programs to run periodically or at a specific time.
+- **Shutdown**: Allows proper local or remote shutdown of the machine.
+- **Sort**: Sorts input.
+- **Start**: Starts a separate window to run a specified program or command.
+- **Systeminfo**: Displays machine-specific properties and configuration.
+- **Taskkill**: Ends one or more tasks or processes.
+- **Tasklist**: Displays all currently running tasks including services.
+- **Time**: Displays or sets the system time.
+- **Title**: Sets the window title for a CMD.EXE session.
+- **Tracert**: Traces route to a network host.
+- **Tree**: Graphically displays the directory structure of a drive or path.
+- **Type**: Displays the contents of a text file.
+- **Ver**: Displays the Windows version.
+- **Verify**: Tells Windows whether to verify that your files are written correctly to a disk.
+- **Vol**: Displays a disk volume label and serial number.
+- **Xcopy**: Copies files and directory trees.
+
+For a detailed explanation of each command and their parameters, you can refer to the full list of Command Prompt commands provided by sources like Alphr¹ and The Windows Club². Additionally, you can always use the `/?` parameter with any command in the Command Prompt to get help about that specific command. For example, typing `ipconfig /?` will give you detailed information about the `ipconfig` command.
+
+Source: Conversation with Bing, 4/2/2024
+(1) The Full List of Command Prompt (CMD) Commands - Alphr. https://www.alphr.com/full-list-command-prompt-commands/.
+(2) Complete list of Command Prompt (CMD) commands - The Windows Club. https://www.thewindowsclub.com/complete-list-of-command-prompt-commands.
+(3) A-Z List of Windows CMD Commands (PDF Download) - WinDOSPC. https://windospc.com/a-to-z-list-of-all-windows-cmd-commands-pdf/.
+(4) A-Z List Of Windows CMD Commands - TechLog360. https://techlog360.com/all-windows-cmd-commands/.
