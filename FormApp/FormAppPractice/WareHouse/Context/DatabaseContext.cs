@@ -6,7 +6,7 @@ namespace WareHouse.Context;
 public class DatabaseContext : DbContext
 {
     //model -> table 
-    public DbSet<Group> Groups { get; set; }
+    public DbSet<Group> Groups { get; set; } 
     public DbSet<Product> Products { get; set; }
 
     //database config
