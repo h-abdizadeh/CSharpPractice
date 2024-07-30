@@ -1,7 +1,8 @@
 using static System.Console;
+using static System.String;
+using static System.Array;//25
 
-//See https://aka.ms/new-console-template for more information
-///*Console.*/WriteLine("Hello, World!");
+//*Console.*/WriteLine("Hello, World!");
 
 //1
 //WriteLine(5 + 3);
@@ -307,3 +308,251 @@ using static System.Console;
 //WriteLine(Join('-',names2));
 //WriteLine(Join(',',numbers1));
 //WriteLine(Join(',',names1));
+
+//22
+//string[] names = new string[5];
+
+//A:
+//Clear();
+//Write("enter index 0 to 4 : ");
+//var index = int.Parse(ReadLine());
+
+////if (index < 0 || index > 4) return;
+//if (index < 0 || index > 4) goto A;
+
+//Write("enter name : ");
+//var name = ReadLine();
+
+//names[index] = name;
+
+//Write(Join("\n", names));
+
+//23
+//int[] myArray = { 5, 9, -3, 8, 11 };
+//WriteLine(myArray.Length);
+//WriteLine(myArray.Max());
+//WriteLine(myArray.Min());
+//WriteLine(myArray.Sum());
+//WriteLine(myArray.Average());
+//WriteLine(myArray.First());
+//WriteLine(myArray.Last());
+//WriteLine(myArray.Contains(11));
+//WriteLine(myArray.Contains(2));
+//WriteLine(myArray.Rank);
+//WriteLine(myArray.Count());
+//WriteLine(myArray.Count(n => n > 5));
+
+//24
+//int[] myArray = { 5, 9, -3, 8, 11, 9, 8 };
+//int[] tmpArray = { 4, 5, 6 };
+//WriteLine(Join(" ", myArray.Concat(tmpArray)));
+//WriteLine(Join(" ", myArray.Order()));//dotnet 7.0
+//WriteLine(Join(" ", myArray.OrderBy(n => n)));
+//WriteLine(Join(" ", myArray.OrderByDescending(n => n)));
+//WriteLine(Join(" ", myArray.Distinct()));
+//WriteLine(Join(" ", myArray.Append(20)));
+//WriteLine(Join(" ", myArray.Prepend(10)));
+//WriteLine(Join(" ", myArray));
+//WriteLine(Join(" ", myArray.Reverse()));
+////WriteLine(Join(" ", myArray.Select(n => n > 5)));
+//WriteLine(Join(" ", myArray.Where(n => n > 5)));
+
+//25 - using Array
+//string[] namesArray = { "amir", "sara", "narges", "reza" };
+////Array.Sort(namesArray);
+////Sort(namesArray);
+////Sort(array: namesArray, index: 1, length: 2);
+////Reverse(namesArray);
+////Fill(namesArray, "amir");
+////Clear(namesArray);
+////Resize(ref namesArray, 15);
+////Resize(ref namesArray, 2);
+////Resize(ref namesArray, namesArray.Length + 1);
+
+//Write(Join(",", namesArray));
+
+//26 - using Array
+//string[] namesArray = { "amir", "sara", "narges", "reza" };
+//////var result = Exists(namesArray, n => n is "sara");//==
+//////var result = Exists(namesArray, n => n is "ali");
+//////var result = FindIndex(namesArray, n => n is "narges");
+////var result = FindIndex(namesArray, n => n is "ali");//-1
+
+////Write(result);
+//var result = FindAll(namesArray, n => n.Contains("e"));
+//Write(Join(", ", result));
+
+//27
+//string[] namesArray = { "amir", "sara", "narges", "reza" };
+//Write("enter name : ");
+//var name = ReadLine();
+
+//if (namesArray.Contains(name))
+//{
+//    var index = FindIndex(namesArray, n => n == name);
+//    namesArray[index] = "";// string.Empty;
+//}
+//else
+//{
+//    Resize(ref namesArray, namesArray.Length + 1);
+//    namesArray[namesArray.Length-1] = name;
+//}
+//Write(Join(", ", namesArray));
+
+//28
+//Range range = 1..10;
+//WriteLine(range.Start);
+//WriteLine(range.End);
+
+//29
+////List<string> list1 = new List<string>();
+//var list1 = new List<string>();
+//var list2 = new List<int> { 1, 5, 9, 0, -3, 10 };
+
+//WriteLine(list1.Count);
+//WriteLine(list2.Count);
+//WriteLine(list2[4]);
+//list1.Add("farda");
+//var tmp =
+//    new List<string> { "dotnet", "csharp", "dotnet" };
+//list1.AddRange(tmp);
+//list1.Insert(1, "console");
+//list1.Insert(list1.Count, "practice");
+//list2.InsertRange(3, list2);
+////list2.RemoveAt(3);//index
+////list1.Remove("dotnet");//value
+////list1.RemoveAll(a => a == "dotnet");
+////list1.RemoveAll(n=>n.Contains("s"));
+//list1.RemoveRange(2, 3);//(index,count)
+//WriteLine(Join(" ", list1));
+//WriteLine(Join(" ", list2));
+
+//30
+//start:
+//Clear();
+
+//var rnd = new Random();
+//WriteLine(rnd.Next());
+//WriteLine(rnd.Next(100));//0 -> 99
+//WriteLine(rnd.Next(50,100));//50 -> 99
+//WriteLine(rnd.NextDouble());
+//WriteLine(rnd.NextInt64());
+//WriteLine(rnd.NextSingle());
+//WriteLine(rnd.Next(1000,10000));
+
+
+//ReadKey();
+//goto start;
+
+//31
+//var namesList =
+//    new List<string> { "amir", "sara", "narges", "reza" };
+
+//Write("enter name : ");
+//var name = ReadLine();
+
+//if (namesList.Contains(name))
+//{
+//    namesList.Remove(name);
+//}
+//else
+//{
+//    namesList.Add(name);
+//}
+
+//Write(Join(", ", namesList));
+
+
+//32
+//var namesList =
+//    new List<string> { "amir", "sara", "narges", "reza" };
+
+//var rnd = new Random();
+//var index = rnd.Next(namesList.Count);//4
+
+//Write(namesList[index]);
+
+//33
+//var mylist = new List<int> { 5, 9, 8, 1, -1, 7, 5, 8, 2 };
+
+////binary search
+////mylist.Sort();//important in binarysearch
+////WriteLine(mylist.BinarySearch(7));
+////WriteLine(mylist.BinarySearch(10));
+
+////take
+////var result = mylist.Take(3);
+////var result = mylist.TakeLast(3);
+////var result = mylist.Take(3..6);//range
+//var result = mylist.TakeWhile(n => n > 0);
+//WriteLine(Join(" ", result));
+
+//34
+////queue
+//var myQueue = new Queue<int>();
+//myQueue.Enqueue(5);
+//myQueue.Enqueue(8);
+//myQueue.Enqueue(-3);
+//WriteLine(myQueue.Dequeue());
+//WriteLine(myQueue.Peek());
+
+//Write(Join(" ", myQueue));
+
+//stack
+//var myStack = new Stack<int>();
+//myStack.Push(5);
+//myStack.Push(8);
+//myStack.Push(-3);
+//WriteLine(myStack.Pop());
+//WriteLine(myStack.Peek());
+
+//Write(Join(' ', myStack));
+
+//35 list -> queue
+//var queuelist = new List<int>();
+////enqueue
+//queuelist.Add(10);
+//queuelist.Add(5);
+//queuelist.Add(7);
+//WriteLine(Join(' ', queuelist));
+
+////dequeue
+//queuelist.RemoveAt(0);
+//WriteLine(Join(' ', queuelist));
+
+////peek
+//WriteLine(queuelist[0]);
+
+//36 list -> stack
+//var stacklist = new List<int>();
+////push
+//stacklist.Add(1);
+//stacklist.Add(7);
+//stacklist.Add(5);
+//WriteLine(Join(' ', stacklist));
+
+////pop
+//stacklist.RemoveAt(stacklist.Count - 1);
+//WriteLine(Join(' ', stacklist));
+
+////peek
+//WriteLine(stacklist[stacklist.Count - 1]);
+
+//37 for
+////for (int i = 1; i <= 10; i++)
+////for (int i = 1; i <= 10; i+=2)
+//    Write("farda");
+
+//38
+//for (int i = 1; i <= 10;)
+//    WriteLine(i++);
+
+//39
+for (; true;)
+{
+    var n = new Random().Next();
+    Write($"{n}\t");
+
+    if (n % 5 is 0 /*&& n % 7 is 0*/)
+        break;
+}
