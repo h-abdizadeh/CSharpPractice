@@ -1,6 +1,7 @@
 using static System.Console;
 using static System.String;
 using static System.Array;//25
+using static System.ConsoleColor;
 
 //*Console.*/WriteLine("Hello, World!");
 
@@ -548,11 +549,88 @@ using static System.Array;//25
 //    WriteLine(i++);
 
 //39
-for (; true;)
-{
-    var n = new Random().Next();
-    Write($"{n}\t");
+//for (; true;)
+//{
+//    var n = new Random().Next();
+//    Write($"{n}\t");
 
-    if (n % 5 is 0 /*&& n % 7 is 0*/)
-        break;
-}
+//    if (n % 5 is 0 /*&& n % 7 is 0*/)
+//        break;
+//}
+
+//40
+//for (int i = 10; i <= 98; i += 2)
+//    Write($"{i} ");
+//for (int i = 10; i <= 98; i++)
+//{
+//    if (i % 2 is 0)
+//        Write($"{i} ");
+//}
+
+//41
+//Write("enter number : ");
+//var n = int.Parse(ReadLine());
+//var result = 0;
+//for(int i = 1; i <= n; i++)
+//{
+//    //result = result + i;
+//    result += i;
+//}
+//Write($"sum is : {result}");
+
+//42
+////BackgroundColor = Red;
+////WriteLine("                                             ");
+////BackgroundColor = Black;
+//var colorlist =
+//    new List<ConsoleColor> { Red, Green, Yellow, White, Gray, Cyan };
+
+////for (int i = 1; i <= 10; i++)
+//for (int i = 1; true; i++)
+//{
+//    var index = new Random().Next(colorlist.Count);
+//    BackgroundColor = colorlist[index];
+//    WriteLine("                                             ");
+
+//    Thread.Sleep(100);
+//    Beep(new Random().Next(250,1500), new Random().Next(100, 1000));
+//    if(i==20)
+//    {
+//        BackgroundColor = Black;
+//        Clear();
+//        i = 0;
+//    }
+//}
+//BackgroundColor = Black;
+
+//43
+//for (; true;)
+//{
+//    var key = ReadKey();
+//    WriteLine((int)key.KeyChar);
+
+//    if (key.KeyChar == 'a')
+//        Beep(450, 100);
+
+//    if (key.KeyChar == 'l')
+//        Beep(900, 100);
+
+//    if (key.KeyChar == 's')
+//        Beep(250, 100);
+
+//    if (key.KeyChar == 'k')
+//        Beep(1500, 100);
+//}
+
+//44
+//ulong a = 0, b = 1;
+//Write($"{a} {b} ");
+//ulong c = a + b;
+//for (int i = 1; i <= 5000000; i++)
+//{
+//    Write($"{c} ");
+
+//    a = b;
+//    b = c;
+//    c = a + b;
+//}
