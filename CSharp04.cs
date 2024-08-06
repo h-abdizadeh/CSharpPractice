@@ -634,3 +634,83 @@ using static System.ConsoleColor;
 //    b = c;
 //    c = a + b;
 //}
+
+
+//45
+//var names = new List<string> { "fatemeh",
+//        "amirmohammad",
+//        "pooyan",
+//        "alireza",
+//        "amirreza M",
+//        "amirreza R",
+//        "amirhossein",
+//        "ali",
+//        "abolfazl" };
+
+////for (int i = 1; i <= 3; i++)
+//var end = names.Count;
+//for (int i = 1; i <= end; i++)
+//{
+//    var index = new Random().Next(names.Count);
+//    WriteLine(names[index]);
+//    names.RemoveAt(index);
+//}
+
+//46
+//var mylist =
+//    new List<int> { 8, 10, 11, 17, 8, -3, -12, 3, -5 };
+////1
+////var result = mylist.Where(n => n < 0);
+////Write(Join(' ', result));
+
+////2
+////for (var i = 0; i < mylist.Count; i++)
+////    if (mylist[i] < 0)
+////        Write($"{mylist[i]} ");
+
+////3 break
+////ForegroundColor = White;
+////for(int i=0; i<mylist.Count; i++)
+////{
+////    if(mylist[i] < 0)
+////    {
+////        BackgroundColor = Red;
+////        Write($"{mylist[i]}");
+////        break;
+////    }
+////    else
+////    {
+////        BackgroundColor = Green;
+////        Write($"{mylist[i]}");
+////    }
+////    BackgroundColor = Black;
+////    Write(" ");
+////}
+////BackgroundColor = Black;
+
+//47 continue
+//var mylist =
+//    new List<int> { 8, 10, 11, 17, 8, -3, -12, 3, -5 };
+
+//for (int i = 0; i < mylist.Count; i++)
+//{
+//    if (mylist[i] < 0)
+//        continue;
+//        //break;
+
+//    Write($"{mylist[i]} ");
+//}
+
+//48
+int a = 0, b = 1;
+int c = a + b;
+
+Write($"{a} {b} ");
+while (c < 1000)
+{
+    Write($"{c} ");
+    a = b;
+    b = c;
+    c = a + b;
+}
+
