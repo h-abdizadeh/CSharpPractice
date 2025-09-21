@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using static System.Console;
 using static System.Convert;
 using static System.String;
@@ -676,11 +675,11 @@ using static System.String;
 //    Write("must be 11 char");
 
 //57
-Write("phone : ");
-var phone = ReadLine();
-if (phone?.Length == 11 &&
-    phone.StartsWith("09") &&
-    phone.All(char.IsDigit))
-    Write("valid phone");
-else
-    Write("not valid");
+// Write("phone : ");
+// var phone = ReadLine();
+// if (phone?.Length == 11 &&
+//     phone.StartsWith("09") &&
+//     phone.All(char.IsDigit))
+//     Write("valid phone");
+// else
+//     Write("not valid");
