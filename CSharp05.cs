@@ -382,7 +382,7 @@ using static System.String;
 //var num3 = new int[5];
 //var num4 = new int[] { 3, 7, -4, 11, 9 };
 
-//36
+//36 
 //string[] names = { "amir", "narjes", "benyamin", "mahan", "mehdi" };
 ////1
 ////WriteLine(names.Length);
@@ -453,7 +453,7 @@ using static System.String;
 //WriteLine(Join(" ", Array.FindIndex(names,n => n.Contains("i"))));
 //WriteLine(Join(" ", Array.FindAll(names,n => n.Contains("i"))));
 
-//41
+//41 List
 //var names1 = new List<string>();
 //var names2 =
 //    new List<string>()
@@ -638,6 +638,7 @@ using static System.String;
 //WriteLine(str.Length);
 //WriteLine(str.Trim());
 //WriteLine(str.Trim().Length);
+//WriteLine(str.Length- str.Trim().Length);
 //WriteLine(str.TrimEnd());
 //WriteLine(str.TrimStart());
 //WriteLine(str.ToLower());
@@ -670,16 +671,45 @@ using static System.String;
 //        else
 //            Write("all char is not digit");
 //    else
-//        Write("no start with 09");
+//        Write("not start with 09");
 //else
 //    Write("must be 11 char");
 
 //57
-// Write("phone : ");
-// var phone = ReadLine();
-// if (phone?.Length == 11 &&
-//     phone.StartsWith("09") &&
-//     phone.All(char.IsDigit))
-//     Write("valid phone");
-// else
-//     Write("not valid");
+//Write("phone : ");
+//var phone = ReadLine();
+//if (phone?.Length == 11 &&
+//    phone.StartsWith("09") &&
+//    phone.All(char.IsDigit))
+//    Write("valid phone");
+//else
+//    Write("not valid");
+
+//58
+//WriteLine(Math.Abs(-5));
+//WriteLine(Math.Min(5, 7));
+//WriteLine(Math.Max(5, 7));
+//WriteLine(Math.E);
+//WriteLine(Math.PI);
+//WriteLine(Math.Pow(2, 5));
+//WriteLine(Math.Sqrt(64));
+//WriteLine(Math.Log2(256));
+//WriteLine(Math.Round(3.234567, 2));
+//WriteLine(Math.Round(3.235567, 2));
+//WriteLine(Math.Round(3.236567, 2));
+
+//59
+//Write("row : ");
+//var r = int.Parse(ReadLine());
+
+//Write("column : ");
+//var c = int.Parse(ReadLine());
+
+//for (int i = 1; i <= r; i++)
+//{
+//    for (int j = 1; j <= c; j++)
+//    {
+//        Write(i * j + "\t");
+//    }
+//    WriteLine();
+//}
